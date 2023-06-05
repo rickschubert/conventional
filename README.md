@@ -25,7 +25,7 @@ changeType(ABC-123): rest of the message with spaces, even commas
 
 ## One-line usage from shell
 
-If you want to be able to fire the script from anywhere in your terminal, like so `feat I just built a new feature`, make sure to set an alias in your shell configuration:
+If you want to be able to fire the script from anywhere in your terminal without invoking `go run` like so: `feat I just built a new feature`, then make sure to set an alias in your shell configuration:
 
 Set the following in your `~/.zshrc`:
 
