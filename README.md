@@ -12,7 +12,7 @@ Type `fix I have fixed this` while you are on branch `me/ABC-123/important-fix` 
 * When you execute the script with
 
 ```
-go run main.go [changeType] rest of the message with spaces, however you want
+go run main.go [changeType] rest of the message with spaces, even commas
 ```
 
 * Then we will run `git add -A` to add all files
@@ -20,7 +20,7 @@ go run main.go [changeType] rest of the message with spaces, however you want
 * And we will create a commit with message
 
 ```
-changeType(ABC-123): rest of the message with spaces, however you want
+changeType(ABC-123): rest of the message with spaces, even commas
 ```
 
 ## One-line usage from shell
