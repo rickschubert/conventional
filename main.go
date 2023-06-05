@@ -30,15 +30,12 @@ func main() {
 	}
 	message := strings.TrimRight(messageBuilder.String(), " ")
 
-	scope := fmt.Sprintf("(%s)", ticketId)
-
-	var commitLine string
-	// Only add the scope section if it's filled out
-	if scope == "()" {
-		commitLine = fmt.Sprintf("%s: %s", changeType, message)
-	} else {
-		commitLine = fmt.Sprintf("%s%s: %s", changeType, scope, message)
+	var scope string
+	if ticketId != "" {
+		scope = fmt.Sprintf("(%s)", ticketId)
 	}
+
+	commitLine := fmt.Sprintf("%s%s: %s", changeType, scope, message)
 
 	addAllFilesCmd := exec.Command("git", "add", "-A")
 	_, err = addAllFilesCmd.Output()
