@@ -3,21 +3,29 @@ Conventional Committer
 
 Commit your current progress using conventional commits with one command:
 
-Type `fix I have fixed this` while you are on branch `me/ABC-123/important-fix` to commit all your currently changed files with the message `fix(ABC-123): I have fixed this`!
+Type `fix I have fixed this` while you are on branch `me/ABC-123/important-fix` to commit all your currently changed files with the message `fix(ABC-123): I have fixed this`.
 
-# Example
+## Example
 
-* Given you are on a branch with name `rickschubert/ABC-123/conventional-committer` where the ticket number is enclosed by two slashes
+* Given you are on branch `me/ABC-123/my-change`
+* And the ticket number in the branches is surrounded by slashes
+* When you execute the script with
 
-* And you execute the script with `go run main.go [changeType] rest of the message with spaces, however you want`
+```
+go run main.go [changeType] rest of the message with spaces, even commas
+```
 
 * Then we will run `git add -A` to add all files
 
-* And we will create a commit with message `changeType(ABC-123): rest of the message with spaces, however you want`
+* And we will create a commit with message
 
-# One-line usage from shell
+```
+changeType(ABC-123): rest of the message with spaces, even commas
+```
 
-If you want to be able to fire the script from anywhere in your terminal, like so `feat I just built a new feature`, make sure to set an alias in your shell configuration:
+## One-line usage from shell
+
+If you want to be able to fire the script from anywhere in your terminal without invoking `go run` like so: `feat I just built a new feature`, then make sure to set an alias in your shell configuration:
 
 Set the following in your `~/.zshrc`:
 
