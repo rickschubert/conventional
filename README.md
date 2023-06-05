@@ -38,6 +38,6 @@ alias docs="go run /path/to/conventional-committer/main.go docs"
 alias tests="go run /path/to/conventional-committer/main.go test"
 ```
 
-Now you can for example run `feat I have created a new feature` and it will automatically create conventional commits for you!
+Now you can for example type `feat I have created a new feature` in your terminal and it will automatically invoke the script.
 
 Note: We have to use `tests` instead of `test` because `test` is a shell built-in command.
