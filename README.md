@@ -24,7 +24,7 @@ changeType(ABC-123): rest of the message with spaces, even commas
 ### Install using golang
 
 ```sh
-go install github.com/rickschubert/conventional-committer
+go install github.com/rickschubert/conventional
 # Execute the tool from anywhere in your terminal with conventional
 conventional feat This is my first message
 ```
