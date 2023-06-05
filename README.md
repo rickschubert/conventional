@@ -8,13 +8,13 @@ Type `fix I have fixed this` while you are on branch `me/ABC-123/important-fix` 
 ### Example
 
 ```gherkin
-Given you are on branch `me/ABC-123/my-change`
+Given you are on branch "me/ABC-123/my-change"
 And the ticket number in the branches is surrounded by slashes
 When you execute the script with
-    `go run main.go [changeType] rest of the message with spaces, however you want`
-Then we will run `git add -A` to add all files
+    "go run main.go [changeType] rest of the message with spaces, however you want"
+Then we will run "git add -A" to add all files
 And we will create a commit with message
-    `changeType(ABC-123): rest of the message with spaces, however you want`
+    "changeType(ABC-123): rest of the message with spaces, however you want"
 ```
 
 ### One-line usage from shell
