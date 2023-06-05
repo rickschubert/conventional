@@ -32,7 +32,7 @@ func main() {
 	if ticketSection == "()" {
 		commitLine = fmt.Sprintf("%s: %s", changeType, strings.TrimRight(plainMessage.String(), " "))
 	} else {
-		commitLine = fmt.Sprintf("%s(%s): %s", changeType, ticketSection, strings.TrimRight(plainMessage.String(), " "))
+		commitLine = fmt.Sprintf("%s%s: %s", changeType, ticketSection, strings.TrimRight(plainMessage.String(), " "))
 	}
 
 	addAllFilesCmd := exec.Command("git", "add", "-A")
