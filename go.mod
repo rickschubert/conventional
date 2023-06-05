@@ -1,3 +1,3 @@
-module github.com/rickschubert/conventional-committer
+module github.com/rickschubert/conventional
 
 go 1.19
