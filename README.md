@@ -5,13 +5,13 @@ This small script helps you to commit your current changes using conventional co
 
 # Example
 
-Given you are on a branch with name `rickschubert/ABC-123/conventional-committer` where the ticket number is enclosed by two slashes
+* Given you are on a branch with name `rickschubert/ABC-123/conventional-committer` where the ticket number is enclosed by two slashes
 
-And you execute the script with `go run main.go [changeType] rest of the message with spaces, however you want`
+* And you execute the script with `go run main.go [changeType] rest of the message with spaces, however you want`
 
-Then we will run `git add -A` to add all files
+* Then we will run `git add -A` to add all files
 
-And we will create a commit with message `changeType(ABC-123): rest of the message with spaces, however you want`
+* And we will create a commit with message `changeType(ABC-123): rest of the message with spaces, however you want`
 
 # One-line usage from shell
 
