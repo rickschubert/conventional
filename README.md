@@ -9,7 +9,7 @@ Type `fix I have fixed this` while you are on branch `me/ABC-123/important-fix` 
 
 * Given you are on branch `me/ABC-123/my-change`
 * And the ticket number in the branches is surrounded by slashes
-* When you execute the script with
+* When you execute the tool like so:
 ```
 conventional [changeType] rest of the message with spaces, even commas
 ```
