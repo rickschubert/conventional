@@ -11,12 +11,31 @@ Type `fix I have fixed this` while you are on branch `me/ABC-123/important-fix` 
 * And the ticket number in the branches is surrounded by slashes
 * When you execute the script with
 ```
-go run main.go [changeType] rest of the message with spaces, even commas
+conventional [changeType] rest of the message with spaces, even commas
 ```
 * Then we will run `git add -A` to add all files
 * And we will create a commit with message
 ```
 changeType(ABC-123): rest of the message with spaces, even commas
+```
+
+## Installation
+
+### Install using golang
+
+```sh
+go install github.com/rickschubert/conventional-committer
+# Execute the tool from anywhere in your terminal with conventional
+conventional feat This is my first message
+```
+
+### Download from Releases
+
+- Download the right file for your operating system from the [Releases page](https://github.com/rickschubert/conventional/releases)
+- Invoke the script by pointing to the download:
+
+```sh
+/path/to/download/conventional feat This is my first message
 ```
 
 ## One-line usage from shell
@@ -26,12 +45,19 @@ If you want to be able to fire the script from anywhere in your terminal without
 Set the following in your `~/.zshrc`:
 
 ```sh
-# Custom conventional commiter
-alias fix="go run /path/to/conventional-committer/main.go fix"
-alias feat="go run /path/to/conventional-committer/main.go feat"
-alias chore="go run /path/to/conventional-committer/main.go chore"
-alias docs="go run /path/to/conventional-committer/main.go docs"
-alias tests="go run /path/to/conventional-committer/main.go test"
+# If you installed it with go install:
+alias fix="/path/to/conventional fix"
+alias feat="/path/to/conventional feat"
+alias chore="/path/to/conventional chore"
+alias docs="/path/to/conventional docs"
+alias tests="/path/to/conventional test"
+
+# If you downloaded a release:
+alias fix="conventional fix"
+alias feat="conventional feat"
+alias chore="conventional chore"
+alias docs="conventional docs"
+alias tests="conventional test"
 ```
 
 Now you can for example type `feat I have created a new feature` in your terminal and it will automatically invoke the script.
