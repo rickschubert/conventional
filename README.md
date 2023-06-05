@@ -40,7 +40,7 @@ conventional feat This is my first message
 
 ## One-line usage from shell
 
-If you want to be able to fire the script from anywhere in your terminal without invoking `go run` like so: `feat I just built a new feature`, then make sure to set an alias in your shell configuration:
+If you want to be able to fire the script from anywhere in your terminal without having to type `conventional` first, then make sure to set an alias in your shell configuration:
 
 Set the following in your `~/.zshrc`:
 
@@ -60,6 +60,6 @@ alias docs="conventional docs"
 alias tests="conventional test"
 ```
 
-Now you can for example type `feat I have created a new feature` in your terminal and it will automatically invoke the script.
+Now you can type `feat I have created a new feature` in your terminal and it will automatically run our tool!
 
-Note: We have to use `tests` instead of `test` because `test` is a shell built-in command.
+Note: We want to alias `tests` for `test` because `test` is a shell built-in command which we don't want to override.
