@@ -7,7 +7,7 @@ Type `fix I have fixed this` while you are on branch `me/ABC-123/important-fix` 
 
 ## Example
 
-* Given you are on branch "me/ABC-123/my-change"
+* Given you are on branch `me/ABC-123/my-change`
 * And the ticket number in the branches is surrounded by slashes
 * When you execute the script with
 
