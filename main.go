@@ -12,40 +12,46 @@ var ticketRegex = regexp.MustCompile(`\/[A-Z]+-[0-9]+\/`)
 
 func main() {
 	cmd := exec.Command("git", "rev-parse", "--abbrev-ref", "HEAD")
-	stdout, _ := cmd.Output()
-	branchName := string(stdout)
-	ticketNumberWithSlashes := ticketRegex.FindString(branchName)
-	withoutSlashes := strings.ReplaceAll(ticketNumberWithSlashes, "/", "")
+	branchName, err := cmd.Output()
+	if err != nil {
+		fmt.Println(fmt.Errorf("an error occured trying to retrieve the branch name: %s", err).Error())
+		os.Exit(1)
+	}
+
+	ticketIdWithSeparators := ticketRegex.FindString(string(branchName))
+	ticketId := strings.ReplaceAll(ticketIdWithSeparators, "/", "")
 
 	changeType := os.Args[1]
 	messageContent := os.Args[2:]
 
-	var plainMessage strings.Builder
+	var messageBuilder strings.Builder
 	for _, piece := range messageContent {
-		plainMessage.WriteString(fmt.Sprintf("%s ", piece))
+		messageBuilder.WriteString(fmt.Sprintf("%s ", piece))
 	}
+	message := strings.TrimRight(messageBuilder.String(), " ")
 
-	ticketSection := fmt.Sprintf("(%s)", withoutSlashes)
+	scope := fmt.Sprintf("(%s)", ticketId)
 
 	var commitLine string
-	// Check if the ticket section is empty; don't append it in that case
-	if ticketSection == "()" {
-		commitLine = fmt.Sprintf("%s: %s", changeType, strings.TrimRight(plainMessage.String(), " "))
+	// Only add the scope section if it's filled out
+	if scope == "()" {
+		commitLine = fmt.Sprintf("%s: %s", changeType, message)
 	} else {
-		commitLine = fmt.Sprintf("%s%s: %s", changeType, ticketSection, strings.TrimRight(plainMessage.String(), " "))
+		commitLine = fmt.Sprintf("%s%s: %s", changeType, scope, message)
 	}
 
 	addAllFilesCmd := exec.Command("git", "add", "-A")
-	_, err := addAllFilesCmd.Output()
+	_, err = addAllFilesCmd.Output()
 	if err != nil {
 		fmt.Println(fmt.Errorf("an error occured adding all files: %s", err).Error())
-		os.Exit(122)
+		os.Exit(1)
 	}
+
 	commitCmd := exec.Command("git", "commit", "-m", fmt.Sprintf(`"%s"`, commitLine))
 	_, err = commitCmd.Output()
 	if err != nil {
 		fmt.Println(fmt.Errorf("an error occured commiting with message, see here: %s", err).Error())
-		os.Exit(122)
+		os.Exit(1)
 	}
 
 	fmt.Println(commitLine)
