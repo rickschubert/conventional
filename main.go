@@ -21,6 +21,11 @@ func main() {
 	ticketIdWithSeparators := ticketRegex.FindString(string(branchName))
 	ticketId := strings.ReplaceAll(ticketIdWithSeparators, "/", "")
 
+	if len(os.Args) < 3 {
+		fmt.Println("Please refer to the readme on how to invoke this script; not enough arguments passed.")
+		os.Exit(1)
+	}
+
 	changeType := os.Args[1]
 	messageContent := os.Args[2:]
 
