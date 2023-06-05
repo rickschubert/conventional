@@ -47,7 +47,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	commitCmd := exec.Command("git", "commit", "-m", fmt.Sprintf(`"%s"`, commitLine))
+	commitCmd := exec.Command("git", "commit", "-m", fmt.Sprintf(`%s`, commitLine))
 	_, err = commitCmd.Output()
 	if err != nil {
 		fmt.Println(fmt.Errorf("an error occured commiting with message, see here: %s", err).Error())
