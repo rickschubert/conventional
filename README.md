@@ -1,5 +1,7 @@
-Conventional Committer
-----------------------
+![](assets/heroimg.jpg "Fox committing conventional commits")
+
+conventional
+============
 
 Commit your current progress using conventional commits with one command:
 
