@@ -21,21 +21,23 @@ changeType(ABC-123): rest of the message with spaces, even commas
 
 ## Installation
 
-### Install using golang
+### Download as release
+
+- Download the right file for your operating system from the [releases page](https://github.com/rickschubert/conventional/releases)
+- Invoke the script by pointing to the download:
+
+```sh
+/path/to/download/conventional feat This is my first message
+```
+
+### Install using Golang
+
+This step assumes that you have Golang installed locally on your machine.
 
 ```sh
 go install github.com/rickschubert/conventional@latest
 # Execute the tool from anywhere in your terminal with conventional
 conventional feat This is my first message
-```
-
-### Download from Releases
-
-- Download the right file for your operating system from the [Releases page](https://github.com/rickschubert/conventional/releases)
-- Invoke the script by pointing to the download:
-
-```sh
-/path/to/download/conventional feat This is my first message
 ```
 
 ## One-line usage from shell
