@@ -67,3 +67,7 @@ alias tests="conventional test"
 Now you can type `feat I have created a new feature` in your terminal and it will automatically run our tool!
 
 Note: We want to alias `tests` for `test` because `test` is a shell built-in command which we don't want to override.
+
+_________________
+
+[Fox image](https://github.com/trayio/mock-inspect/tree/main/heroimg_200.jpeg) created by AI with Bing Image Creator powered by DALL·E
