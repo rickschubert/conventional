@@ -1,4 +1,4 @@
-![](./heroimg.jpg "Fox committing conventional commits")
+![](./heroimg_200.jpg "Fox committing conventional commits")
 
 conventional
 ============
