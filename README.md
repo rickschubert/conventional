@@ -5,7 +5,7 @@ conventional
 
 Commit your current progress using conventional commits with one command:
 
-Type `fix I have fixed this` while you are on branch `me/ABC-123/important-fix` to commit all your currently changed files with the message `fix(ABC-123): I have fixed this`.
+Type `fix This has been solved` while you are on branch `me/ABC-123/important-fix` to commit all your currently changed files with the message `fix(ABC-123): This has been solved`.
 
 ## Example
 
