@@ -12,7 +12,7 @@ Type `fix This has been solved` while you are on branch `me/ABC-123/important-fi
 * Given you are on branch `me/ABC-123/my-change`
 * And the ticket number in the branches is surrounded by slashes
 * When you execute the tool like so:
-```
+```sh
 conventional [changeType] rest of the message with spaces, even commas
 ```
 * Then we will run `git add -A` to add all files
