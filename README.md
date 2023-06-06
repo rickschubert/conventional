@@ -49,14 +49,14 @@ If you want to be able to fire the script from anywhere in your terminal without
 Set the following in your `~/.zshrc`:
 
 ```sh
-# If you installed it with go install:
+# If you downloaded a release:
 alias fix="/path/to/conventional fix"
 alias feat="/path/to/conventional feat"
 alias chore="/path/to/conventional chore"
 alias docs="/path/to/conventional docs"
 alias tests="/path/to/conventional test"
 
-# If you downloaded a release:
+# If you installed it with go install:
 alias fix="conventional fix"
 alias feat="conventional feat"
 alias chore="conventional chore"
