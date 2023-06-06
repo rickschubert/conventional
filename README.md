@@ -70,4 +70,4 @@ Note: We want to alias `tests` for `test` because `test` is a shell built-in com
 
 _________________
 
-[Fox image](https://github.com/trayio/mock-inspect/tree/main/heroimg_200.jpeg) created by AI with Bing Image Creator powered by DALL·E
+[Fox image](https://github.com/rickschubert/conventional/tree/main/heroimg_200.jpeg) created by AI with Bing Image Creator powered by DALL·E
